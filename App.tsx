@@ -56,7 +56,12 @@ export default function App() {
 
   return (
     <Animated.View style={styles.container}>
-      <Svg width="200" height="200" viewBox="0 0 6 5">
+      <Svg
+        width="200"
+        height="200"
+        viewBox="0 0 6 5"
+        style={{ position: 'absolute' }}
+      >
         <AnimatedCircle
           cx={3}
           cy={2.5}
@@ -74,6 +79,18 @@ export default function App() {
           stroke="rgba(0, 100,0, 1)"
           strokeDasharray="6"
           strokeDashoffset={progress}
+        />
+      </Svg>
+      <Svg
+        width="50"
+        height="50"
+        viewBox="0 0 24 24"
+        style={{ position: 'absolute' }}
+      >
+        <Path
+          d="M19 9.5H15V3.5H9V9.5H5L12 16.5L19 9.5ZM11 11.5V5.5H13V11.5H14.17L12 13.67L9.83002 11.5H11ZM19 20.5V18.5H5V20.5H19Z"
+          fill="white"
+          fillOpacity="0.54"
         />
       </Svg>
     </Animated.View>
